@@ -1,0 +1,19 @@
+<template>
+        <lightning-card
+        title="Contact List by AccountId">
+        <div class="slds-var-m-around_medium">
+            <lightning-accordion allow-multiple-sections-open>
+                <template if:true={contacts}>
+                    <template for:each={contacts} for:item="contact">
+                        <lightning-accordion-section name={contact.Name} label={contact.Name} key={contact.Id}>
+                          <b>Name:</b>  <p> {contact.Name}</p> 
+                          <h1>Phone: </h1> <p>{contact.Phone} </p>
+                          <h1>Email: </h1> <p>{contact.Email}</p>
+                    </lightning-accordion-section>
+                </template>
+                </template>
+
+            </lightning-accordion>
+            </div>
+    </lightning-card>
+</template>

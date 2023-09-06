@@ -1,0 +1,19 @@
+<template>
+   <lightning-card title="Service Reader">
+    {recordId}
+    <div class="slds-var-m-around_medium">
+        <lightning-accordion allow-multiple-sections-open>
+            <template if:true={readers.data}>
+                <template for:each={readers.data} for:item="reader">
+                    <lightning-accordion-section name={reader.Name} label={reader.Name} key={reader.Id}>
+                      <b>Name:</b>  <p> {reader.Name}</p> 
+               <!--       <h1>Phone: </h1> <p>{reader.Phone} </p>
+                      <h1>Email: </h1> <p>{reader.Email}</p>
+                -->
+                </lightning-accordion-section>
+            </template>
+            </template>
+        </lightning-accordion>
+    </div>
+   </lightning-card>
+</template>
